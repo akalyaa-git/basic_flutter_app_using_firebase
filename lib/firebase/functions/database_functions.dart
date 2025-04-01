@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 /// [age] - Age field value (integer).
 ///
 /// Logs a message when the document is successfully created.
-Future<void> create(String colName, String docName, String name, String animal, int age) async {
+Future<void> create(
+    String colName, String docName, String name, String animal, int age) async {
   await FirebaseFirestore.instance.collection(colName).doc(docName).set({
     'name': name,
     'animal': animal,
@@ -27,7 +28,8 @@ Future<void> create(String colName, String docName, String name, String animal, 
 /// [newFieldValue] - The new value for the specified field.
 ///
 /// Logs a message when the document is successfully updated.
-Future<void> update(String colName, String docName, String field, var newFieldValue) async {
+Future<void> update(
+    String colName, String docName, String field, var newFieldValue) async {
   await FirebaseFirestore.instance
       .collection(colName)
       .doc(docName)

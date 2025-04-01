@@ -33,7 +33,6 @@ class MyApp extends StatelessWidget {
       home: StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
-
           /// If the user is authenticated, navigate to database options.
           if (snapshot.hasData) {
             return const DataBaseOptions();

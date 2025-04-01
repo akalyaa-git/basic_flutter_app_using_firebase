@@ -23,7 +23,6 @@ class _RetrieveDataState extends State<RetrieveData> {
         child: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance.collection('pets').snapshots(),
           builder: (context, snapshot) {
-
             /// Show a loading spinner while waiting for data.
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
@@ -41,10 +40,12 @@ class _RetrieveDataState extends State<RetrieveData> {
                 itemBuilder: (context, index) {
                   return Card(
                     elevation: 5,
-                    margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                     child: ListTile(
                       title: Text(petDocs[index]['name']), // Display pet name
-                      subtitle: Text(petDocs[index]['animal']), // Display pet type
+                      subtitle:
+                          Text(petDocs[index]['animal']), // Display pet type
                     ),
                   );
                 },

@@ -35,11 +35,11 @@ class _DataBaseOptionsState extends State<DataBaseOptions> {
             ElevatedButton(
               onPressed: () {
                 create(
-                  'pets',  // Collection name
+                  'pets', // Collection name
                   'kitty', // Document ID
                   'jerry', // Name field
-                  'cat',   // Animal field
-                  5,       // Age field
+                  'cat', // Animal field
+                  5, // Age field
                 );
               },
               child: const Text('Create'),
@@ -49,10 +49,10 @@ class _DataBaseOptionsState extends State<DataBaseOptions> {
             ElevatedButton(
               onPressed: () {
                 update(
-                  'pets',  // Collection name
-                  'tom',   // Document ID
-                  'age',   // Field name to update
-                  14,      // New value
+                  'pets', // Collection name
+                  'tom', // Document ID
+                  'age', // Field name to update
+                  14, // New value
                 );
               },
               child: const Text('Update'),
@@ -74,7 +74,8 @@ class _DataBaseOptionsState extends State<DataBaseOptions> {
             /// Button to delete a specific document from Firestore.
             ElevatedButton(
               onPressed: () {
-                delete('pets', 'kitty'); // Deletes the document with ID 'kitty' from 'pets' collection.
+                delete('pets',
+                    'kitty'); // Deletes the document with ID 'kitty' from 'pets' collection.
               },
               child: const Text('Delete'),
             ),

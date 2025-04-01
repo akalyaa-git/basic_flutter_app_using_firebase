@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 Future<void> signup(String email, String password) async {
   try {
     final credential =
-    await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email,
       password: password,
     );
@@ -36,10 +36,8 @@ Future<void> signup(String email, String password) async {
 /// Prints debug messages based on the authentication status.
 Future<void> signin(String email, String password) async {
   try {
-    final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: email,
-        password: password
-    );
+    final credential = await FirebaseAuth.instance
+        .signInWithEmailAndPassword(email: email, password: password);
     debugPrint('SUCCESS Login'); // Login successful
   } on FirebaseAuthException catch (e) {
     if (e.code == 'user-not-found') {

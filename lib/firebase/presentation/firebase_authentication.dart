@@ -33,20 +33,21 @@ class _FirebaseAuthenticationState extends State<FirebaseAuthentication> {
               /// Username input field (only shown when signing up)
               !isLogin
                   ? TextFormField(
-                key: const ValueKey('username'),
-                decoration: const InputDecoration(hintText: 'Enter Username'),
-                validator: (value) {
-                  if (value == null || value.length < 3) {
-                    return 'Username must be at least 3 characters long';
-                  }
-                  return null;
-                },
-                onSaved: (value) {
-                  setState(() {
-                    username = value!;
-                  });
-                },
-              )
+                      key: const ValueKey('username'),
+                      decoration:
+                          const InputDecoration(hintText: 'Enter Username'),
+                      validator: (value) {
+                        if (value == null || value.length < 3) {
+                          return 'Username must be at least 3 characters long';
+                        }
+                        return null;
+                      },
+                      onSaved: (value) {
+                        setState(() {
+                          username = value!;
+                        });
+                      },
+                    )
                   : Container(),
 
               /// Email input field
@@ -113,7 +114,9 @@ class _FirebaseAuthenticationState extends State<FirebaseAuthentication> {
                   });
                 },
                 child: Text(
-                  isLogin ? "Don't have an account? Signup" : "Already Signed Up? Login",
+                  isLogin
+                      ? "Don't have an account? Signup"
+                      : "Already Signed Up? Login",
                 ),
               ),
             ],

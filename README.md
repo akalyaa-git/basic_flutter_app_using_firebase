@@ -15,9 +15,7 @@ This is a Flutter application that integrates Firebase Authentication and Firest
 * User Navigation: Authenticated users are redirected to database operations, while unauthenticated users see the login/signup screen.
 
 # Installation
-
 * Clone the Repository:
-
 git clone https://github.com/your-repository/flutter-firebase-app.git
 cd flutter-firebase-app
 
